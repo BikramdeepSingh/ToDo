@@ -1,10 +1,11 @@
 import Nav from "./components/Nav";
+import ToDo from "./components/ToDo";
 
 function App() {
   return (
     <>
       <Nav />
-      <h1>Bikram</h1>
+      <ToDo />
     </>
   );
 }
