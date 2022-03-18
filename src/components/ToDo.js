@@ -37,7 +37,7 @@ function ToDo() {
       <form action="#">
         <input value={inputText} onChange={inputHandler} type="text" />
         <button onClick={ToDoHandler} disabled={!inputText}>
-          Add Job
+          ADD
         </button>
       </form>
       <div className="todo_displayer">
@@ -49,8 +49,8 @@ function ToDo() {
           )
         )}
       </div>
-      <p>Job Count: {todos.length}</p> //returns the number of items in our
-      todos
+      {/* returns the number of items in our todos */}
+      <p>JOB COUNT: {todos.length}</p>
     </div>
   );
 }
