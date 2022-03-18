@@ -7,8 +7,8 @@ function ToDo() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
 
-  const inputHandler = (appendText) => {
-    setInputText(appendText.target.value);
+  const inputHandler = (event) => {
+    setInputText(event.target.value);
   };
 
   const ToDoHandler = (jobs) => {
@@ -17,22 +17,35 @@ function ToDo() {
       ...todos,
       {
         text: inputText,
-        key: Math.random() * 100,
+        key: todos.length + 1,
       },
     ]);
+    setInputText("");
   };
+
+  useEffect(() => {
+    todos.map((todo) => {
+      console.log(todo);
+    });
+  }, [todos]);
 
   return (
     <div className="ToDo">
-      <h2 className="heading">What's on your work list?</h2>
+      <div className="heading">
+        <h2>What's on your work list?</h2>
+      </div>
+
       <form action="#">
         <input value={inputText} onChange={inputHandler} type="text" />
-        <button onClick={ToDoHandler}>Add Job</button>
+        <button onClick={ToDoHandler} disabled={!inputText}>
+          Add Job
+        </button>
       </form>
 
       <div className="todo_displayer">
-        {todos.map(() => (
-          <h2>{todos.text}</h2>
+        {todos.map((todo) => (
+          //console.log(todo);
+          <h2>{todo.text}</h2>
         ))}
       </div>
 
