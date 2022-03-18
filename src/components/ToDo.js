@@ -1,5 +1,7 @@
+//Responsible for rendering a ToDo from the list
+
 import { useState, useEffect } from "react";
-// import "../styling/ToDo.scss";
+import "../styling/Todo.scss";
 
 function ToDo() {
   const [inputText, setInputText] = useState("");
