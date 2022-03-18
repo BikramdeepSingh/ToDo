@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+# React
+**React** is a declarative javascript library for building user interfaces. Provides ways to design UI and make it reactive to certain events. 
+* **JSX** is a short hand way of writing out a tree of HTML elements which can be seen in the return statement of a function in react. Under the hood, react is using JSX and React elements to construct a virtual DOM.
+* **DOM** is an abbreviation for Document Object Model. DOM refers to the underlying tree of HTML elements that make up a document. In order for react to update the real DOM that we see on a webpage, it has to build a new virtual DOM compared to the old one and update only the elements that have changed in actual DOM.
+* **Declarative UI Framework:** React is referred as a declarative UI framework, meaning it has a level of abstraction between what you write in javascript and what is outputted to DOM.
+* React uses ***components*** to build a UI. Component can be thought of a small piece of a larger UI made up of many different components put together.
+
+
+## Optional Prerequisites
+
+* Prettier can be installed in the VS code for code formatting whenever necessary.
+* In settings, update the editor.formatOnSave setting to True in the JSON file.
+* Eslint installed for JavaScript linting.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
