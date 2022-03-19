@@ -18,9 +18,19 @@ function ToDo() {
       {
         text: inputText,
         key: todos.length + 1,
+        complete: false,
       },
     ]);
     setInputText(""); //refreshed the input box to null
+  };
+
+  const AlterCompletion = (event) => {
+    event.preventDefault();
+  };
+
+  const DeleteTodo = (event) => {
+    event.preventDefault();
+    setTodos([...todos, {}]);
   };
 
   useEffect(() => {
@@ -35,7 +45,12 @@ function ToDo() {
         <h2>What's on your work list?</h2>
       </div>
       <form action="#">
-        <input value={inputText} onChange={inputHandler} type="text" />
+        <input
+          value={inputText}
+          onChange={inputHandler}
+          placeholder="Add a task"
+          type="text"
+        />
         <button onClick={ToDoHandler} disabled={!inputText}>
           ADD
         </button>
@@ -48,6 +63,10 @@ function ToDo() {
             <h2>{todo.text}</h2>
           )
         )}
+        <div className="altering_todos">
+          <button onClick={AlterCompletion}>✅</button>
+          <button onclick={DeleteTodo}>🗑️</button>
+        </div>
       </div>
       {/* returns the number of items in our todos */}
       <p>JOB COUNT: {todos.length}</p>
