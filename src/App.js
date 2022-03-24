@@ -1,11 +1,11 @@
 import Nav from "./components/Nav";
-import ToDo from "./components/ToDo";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
     <>
       <Nav />
-      <ToDo />
+      <TodoList />
     </>
   );
 }
